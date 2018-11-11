@@ -1,0 +1,66 @@
+
+ body{
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ 
+ 
+ 
+ 
+ th{
+    color: rgb(5, 0, 0);
+    height: 10px;
+    width: 300px;
+    vertical-align: bottom;
+    padding:1.0%;
+    text-align: left;
+    border:thin groove;
+    font-size: 3ch;
+    background-color: rgba(238, 238, 238, 0.158);
+} 
+div {
+    margin: auto;
+    width: 50%;
+    border: 3px thin ;
+    padding: 10px;
+    text-align: center;
+
+}
+.entet {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgba(226, 166, 38, 0.856);
+    font-size: 4ch;
+}
+
+
+img{
+
+    width: 36px;
+    height: 34px;
+}
+button 
+{
+    background: transparent;   
+}
+.mm
+{
+    width: 130px;
+    height: 40px;
+    font-size: 20px;
+}
+.nn
+{
+    width: 200px; 
+    height: 40px;
+    font-size: 20px;
+}
+
+.next
+{
+    width: 36px;
+    height: 34px;
+    background-color: aqua;
+}

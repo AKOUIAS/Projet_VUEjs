@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Restaurants liste avec VueJS</title>
+
+    <script src="lib/vue.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body style="background-image: url('lib/image3.jpg')">
+    <div id="app">
+        <br>
+        <div>  
+            <table>
+                <tr>
+                    <th class="entet">Name</th><th><input class="nn" type="text" v-model="nom"></th>           
+                </tr>
+                <tr>
+                    <th class="entet">cuisine</th><th><input class="nn" type="text" v-model="cuisine"></th>  
+                </tr>
+            </table>
+            <div>
+                  <button v-on:click="addRes"><img class="Next" src="lib/add.png"></img></button>
+            </div>
+          
+        </div>
+        <h2>Liste des Restaurants {{nbr}}</h2>
+        <select class="nn" v-on:click="nbrRestaurant" v-model="selected">
+            <option disabled value="">nombre de resultat</option>
+            <option>20</option>
+            <option>10</option>
+            <option>5</option>
+            <option>2</option>
+        </select>
+        <input class="mm" type="text" v-model="sherch">
+        <button v-on:click="sherchRestaurant"><img class="edite" src="lib/find.png"></img></button>
+        <br>
+        <table>
+            <tr class="entet">
+                    <th>nom</th><th>cuisine</th>
+            </tr>
+            <tr v-for="(Res, index) in Restau">  <!-- v-bind:style="{color:getColor(index)}">-->
+                <th>{{Res.name}}</th>
+                <th>{{Res.cuisine}}</th>
+                <th class="mm">
+                    <button v-on:click="editRestaurant(Res)"><img class="delete" src="lib/edite.png"></img></button>
+                    <button v-on:click="removeRestaurant(Res)"><img class="delete" src="lib/rubbish-bin.png"></img></button>
+                </th>
+            </tr>
+        </table>
+        <br>
+        <div>
+        <button v-on:click="pageBack"><img class="Next" src="lib/left-arrow.png"></img></button>
+        <button v-on:click="pageNext"><img class="Next" src="lib/right-arrow.png"></img></button>
+        </div>
+     <dialog id="dialog" style="background-image: url('lib/images2.jpg')">
+         <form method="dialog">
+                
+                        <table>
+                            <tr>
+                                <th class="entet">Name</th><th><input class="nn" type="text" v-model="nom"></th>           
+                            </tr>
+                            <tr>
+                                <th class="entet">cuisine</th><th><input class="nn" type="text" v-model="cuisine"></th>  
+                            </tr>
+                        </table>
+                        <div>
+                                <button v-on:click="EditReST()"><img class="Next" src="lib/edite.png"></img></button>
+                                <button v-on:click="close()"><img class="Next" src="lib/close.png"></img></button>
+                            </div>
+                   </form>
+     </dialog>
+    </div>
+</body>
+
+</html>
